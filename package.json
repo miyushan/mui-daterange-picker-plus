@@ -1,0 +1,54 @@
+{
+  "name": "mui-daterange-picker-plus",
+  "private": false,
+  "version": "0.0.0",
+  "description": "A modern Typescript/JavaScript library for simplifying date-range related operations and enhancing date-picker components in web applications. It provides a range of utilities, including date formatting, parsing, and a fully customizable date range picker with support for various locales.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "ci": "pnpm run lint && pnpm run build",
+    "release": "pnpm run lint && pnpm run build && changeset publish"
+  },
+  "author": "Miyushan Rodrigo <miyushanrodrigo@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miyushan/mui-daterange-picker-plus.git"
+  },
+  "homepage": "https://mui-daterange-picker-plus-playground.vercel.app/demo",
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.7",
+    "@mui/material": "^5.15.7",
+    "date-fns": "^3.3.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/react": "^18.2.54",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "mui-date-range-picker",
+    "date-range-picker",
+    "date-range",
+    "date-picker",
+    "react",
+    "date",
+    "picker",
+    "mui",
+    "material-ui",
+    "material-ui-date-range-picker",
+    "material-ui-date-picker",
+    "material-ui-date-range",
+    "material-ui-date",
+    "material-ui-picker",
+    "material-ui-range",
+    "material-ui-date-range-picker"
+  ]
+}
