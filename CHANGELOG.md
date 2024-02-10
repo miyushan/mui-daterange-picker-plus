@@ -1,5 +1,11 @@
 # mui-date-range-picker-test
 
+## 1.0.1
+
+### Patch Changes
+
+- 8cfcfca: Removed default exports
+
 ## 1.0.0
 
 ### Major Changes
