@@ -4,4 +4,10 @@
 
 ### Major Changes
 
+- 598d2b2: First release
+
+## 1.0.0
+
+### Major Changes
+
 - 451c60c: First release
