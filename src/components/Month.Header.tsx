@@ -37,7 +37,7 @@ const generateYears = ({ start, end }: { start: number; end: number }) => {
     .map((_y, i) => start + i);
 };
 
-const MonthHeader = ({
+export const MonthHeader = ({
   minDate,
   maxDate,
   currentDate,
@@ -338,5 +338,3 @@ const MonthHeader = ({
     </>
   );
 };
-
-export default MonthHeader;

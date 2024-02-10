@@ -27,7 +27,7 @@ const isSameRange = (first: DateRange, second: DateRange) => {
   return false;
 };
 
-const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = ({
+export const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = ({
   ranges,
   setRange,
   selectedRange,
@@ -105,5 +105,3 @@ const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = ({
     </>
   );
 };
-
-export default DefinedRanges;

@@ -15,7 +15,7 @@ type DayProps = {
   hideOutsideMonthDays?: boolean;
 };
 
-const Day: React.FunctionComponent<DayProps> = ({
+export const Day: React.FunctionComponent<DayProps> = ({
   startOfRange,
   endOfRange,
   disabled,
@@ -89,5 +89,3 @@ const Day: React.FunctionComponent<DayProps> = ({
     </Box>
   );
 };
-
-export default Day;

@@ -1,4 +1,4 @@
-import Sections from "./components/Sections";
+import { Sections } from "./components/Sections";
 import { useDateRangePicker } from "./hooks/useDateRangePicker";
 import type { PickerProps } from "./types";
 

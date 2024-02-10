@@ -10,7 +10,7 @@ import {
 import type { SelectChangeEvent, SvgIconProps } from "@mui/material";
 import { differenceInCalendarMonths } from "date-fns";
 import type { Locale } from "date-fns";
-import DefinedRanges from "./Sections.DefinedRanges";
+import { DefinedRanges } from "./Sections.DefinedRanges";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 import { DuelCalender } from "./Sections.DuelCalender";
@@ -55,7 +55,7 @@ type SectionsProps = {
   footerRequired?: boolean;
 };
 
-const Sections = (props: SectionsProps) => {
+export const Sections = (props: SectionsProps) => {
   const theme = useTheme();
   const {
     dateRange,
@@ -326,5 +326,3 @@ const Sections = (props: SectionsProps) => {
     </Grid2>
   );
 };
-
-export default Sections;

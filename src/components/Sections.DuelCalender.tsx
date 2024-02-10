@@ -2,7 +2,7 @@ import { isSameMonth } from "date-fns";
 import type { Locale } from "date-fns";
 import Divider from "@mui/material/Divider";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import Month from "./Month";
+import { Month } from "./Month";
 import { MARKERS } from "../Constants/markers";
 import { NavigationAction } from "../types/utils";
 import type { DateRange } from "../types/utils";

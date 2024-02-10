@@ -17,8 +17,8 @@ import {
   inDateRange,
   isRangeSameDay,
 } from "../utils";
-import MonthHeader from "./Month.Header";
-import Day from "./Day";
+import { MonthHeader } from "./Month.Header";
+import { Day } from "./Day";
 import { NavigationAction } from "../types/utils";
 import type { DateRange } from "../types/utils";
 
@@ -44,7 +44,9 @@ type MonthProps = {
   hideOutsideMonthDays?: boolean;
 };
 
-const Month: React.FunctionComponent<MonthProps> = (props: MonthProps) => {
+export const Month: React.FunctionComponent<MonthProps> = (
+  props: MonthProps
+) => {
   const theme = useTheme();
   const {
     helpers,
@@ -173,5 +175,3 @@ const Month: React.FunctionComponent<MonthProps> = (props: MonthProps) => {
     </>
   );
 };
-
-export default Month;
