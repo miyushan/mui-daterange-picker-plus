@@ -16,10 +16,7 @@
     "module": "ESNext",
     "noEmit": true,
     /* If your code runs in the DOM: */
-    "lib": ["es6", "dom", "dom.iterable"],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "jsx": "preserve"
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "jsx": "react-jsx"
   }
 }

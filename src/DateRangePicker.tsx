@@ -1,8 +1,8 @@
 import { Sections } from "./components/Sections";
 import { useDateRangePicker } from "./hooks/useDateRangePicker";
-import type { PickerProps } from "./types";
+import type { PickerAvailableProps } from "./types";
 
-type BasicPickerPropsWithFooter = PickerProps & {
+type BasicPickerPropsWithFooter = PickerAvailableProps & {
   footerRequired?: boolean;
 };
 

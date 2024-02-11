@@ -1,4 +1,4 @@
-import type { Marker } from "..";
+import type { Marker } from "../types/utils";
 
 export const MARKERS: { [key: string]: Marker } = {
   FIRST_MONTH: Symbol("firstMonth"),

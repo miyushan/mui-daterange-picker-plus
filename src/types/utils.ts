@@ -27,7 +27,7 @@ export type RangeSeparatorIconsProps = {
   md?: ElementType<SvgIconProps>;
 };
 
-export type DateRangeProps = {
+export type PickerProps = {
   initialDateRange?: DateRange;
   definedRanges?: DefinedRange[];
   minDate?: Date | string;

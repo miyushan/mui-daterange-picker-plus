@@ -1,14 +1,14 @@
 import type { PopoverProps } from "@mui/material/Popover";
-import type { DateRangeProps, ModalCustomProps } from "./utils";
+import type { PickerProps, ModalCustomProps } from "./utils";
 
-export type PickerProps = DateRangeProps & {
+export type PickerAvailableProps = PickerProps & {
   modalProps?: PopoverProps;
   customProps?: ModalCustomProps;
 };
 
-export type ModalPickerProps = DateRangeProps & {
+export type PickerModalProps = PickerProps & {
   modalProps: PopoverProps;
   customProps: ModalCustomProps;
 };
 
-export type BasicPickerProps = DateRangeProps;
+export type PickerBaseProps = PickerProps;

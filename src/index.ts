@@ -1,24 +1,24 @@
-import { DateRangePicker } from "./DateRangePicker";
-import { DateRangePickerModal } from "./DateRangePickerModal";
-import type { BasicPickerProps, ModalPickerProps } from "./types";
+import { PickerModal } from "./PickerModal";
+import { PickerBase } from "./PickerBase";
+import type { PickerBaseProps, PickerModalProps } from "./types";
 import type {
   DateRange,
-  DateRangeProps,
+  PickerProps,
   DefinedRange,
   Marker,
   ModalCustomProps,
   RangeSeparatorIconsProps,
 } from "./types/utils";
 
-export { DateRangePickerModal, DateRangePicker };
+export { PickerModal, PickerBase };
 
 export type {
   Marker,
   DateRange,
   DefinedRange,
   RangeSeparatorIconsProps,
-  DateRangeProps,
   ModalCustomProps,
-  ModalPickerProps,
-  BasicPickerProps,
+  PickerProps,
+  PickerModalProps,
+  PickerBaseProps,
 };

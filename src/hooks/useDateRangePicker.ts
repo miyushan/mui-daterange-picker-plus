@@ -17,13 +17,12 @@ import { AVAILABLE_MAX_DATE, AVAILABLE_MIN_DATE } from "../Constants";
 import { NavigationAction } from "../types/utils";
 import type {
   DateRange,
-  DateRangeProps,
+  PickerProps,
   Marker,
   ModalCustomProps,
 } from "../types/utils";
 
-type useDateRangePickerProps = DateRangeProps &
-  Pick<ModalCustomProps, "onSubmit">;
+type useDateRangePickerProps = PickerProps & Pick<ModalCustomProps, "onSubmit">;
 export const useDateRangePicker = (props: useDateRangePickerProps) => {
   const today = new Date();
 

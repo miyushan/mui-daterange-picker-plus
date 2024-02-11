@@ -1,14 +1,14 @@
 import Popover from "@mui/material/Popover";
 import { DateRangePicker } from "./DateRangePicker";
-import type { ModalPickerProps } from "./types";
+import type { PickerModalProps } from "./types";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Dialog, useTheme } from "@mui/material";
 
-export const DateRangePickerModal = ({
+export const PickerModal = ({
   modalProps,
   customProps,
   ...dateRangePickerProps
-}: ModalPickerProps) => {
+}: PickerModalProps) => {
   const theme = useTheme();
   const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
 
