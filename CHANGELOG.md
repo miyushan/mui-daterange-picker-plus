@@ -1,5 +1,11 @@
 # mui-date-range-picker-test
 
+## 1.0.2
+
+### Patch Changes
+
+- 740240e: Type format changed
+
 ## 1.0.1
 
 ### Patch Changes
