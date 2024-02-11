@@ -2,6 +2,16 @@
   "name": "mui-daterange-picker-plus",
   "private": false,
   "version": "1.0.2",
+  "type": "commonjs",
+  "declaration": true,
+  "outDir": "./dist",
+  "strict": true,
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "description": "A modern Typescript/JavaScript library for simplifying date-range related operations and enhancing date-picker components in web applications. It provides a range of utilities, including date formatting, parsing, and a fully customizable date range picker with support for various locales.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -33,6 +43,9 @@
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "mui-date-range-picker",
     "date-range-picker",
