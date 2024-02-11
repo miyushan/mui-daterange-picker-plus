@@ -1,5 +1,11 @@
 # mui-date-range-picker-test
 
+## 1.0.3
+
+### Patch Changes
+
+- fce3ac5: package.json updated
+
 ## 1.0.2
 
 ### Patch Changes

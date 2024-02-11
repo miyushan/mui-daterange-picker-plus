@@ -1,7 +1,7 @@
 {
   "name": "mui-daterange-picker-plus",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "commonjs",
   "declaration": true,
   "outDir": "./dist",
