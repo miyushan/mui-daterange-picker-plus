@@ -7,7 +7,7 @@
 An advanced and highly customizable Date Range Picker component for Material-UI (MUI).
 
 [![npm version](https://img.shields.io/npm/v/mui-daterange-picker-plus?style=flat-square)](https://www.npmjs.com/package/mui-daterange-picker-plus)
-[![License](https://img.shields.io/npm/l/mui-daterange-picker.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/npm/l/mui-daterange-picker-plus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 View Demo [here](https://mui-daterange-picker-plus-playground.vercel.app/demo) âœ¨
 
@@ -17,13 +17,13 @@ View Demo [here](https://mui-daterange-picker-plus-playground.vercel.app/demo) â
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage with Examples](#examples)
-  - [Date Picker Model (Basic)](#1-date-picker-model-basic)
-  - [Date Picker Base (Basic)](#2-date-picker-base-basic)
-  - [Date Picker Model (Advanced)](#3-date-picker-model-advanced)
-  - [Date Picker Base (Advanced)](#4-date-picker-base-advanced)
+- [Usage with Examples](#usage-with-examples)
+  - [Picker Model (Basic)](#1-picker-model-basic)
+  - [Picker Base (Basic)](#2-picker-base-basic)
+  - [Picker Model (Advanced)](#3-picker-model-advanced)
+  - [Picker Base (Advanced)](#4-picker-base-advanced)
 - [Customization using Props](#customization-using-props)
-  - [DateRangeProps](#daterangeprops)
+  - [PickerProps](#pickerprops)
   - [ModalCustomProps](#modalcustomprops)
 - [Useful Types](#useful-types)
   - [Main Types](#main-types)
@@ -51,17 +51,17 @@ npm install mui-daterange-picker-plus
 
 ## Usage with Examples
 
-### 1. Date Picker Model (Basic)
+### 1. Picker Model (Basic)
 
 ```jsx
 import { useState } from "react";
-import { DateRange, DateRangePickerModal } from "mui-daterange-picker-plus";
 import Button from "@mui/material/Button";
+import { PickerModal } from "mui-daterange-picker-plus";
+import type { DateRange } from "mui-daterange-picker-plus";
 
 export default function YourComponent() {
-  // state + handlers for the Modal
-  const [anchorEl, setAnchorEl] =
-    (useState < HTMLButtonElement) | (null > null);
+   // state + handlers for the Modal
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -70,9 +70,9 @@ export default function YourComponent() {
   };
   const open = Boolean(anchorEl);
 
-  // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
-  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState < DateRange > {};
+ // state + handlers for the DateRange Value
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
+  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
     handleSetDateRangeOnSubmit({});
@@ -90,7 +90,7 @@ export default function YourComponent() {
       <Button variant="contained" onClick={handleClick}>
         View Picker Model
       </Button>
-      <DateRangePickerModal
+      <PickerModal
         onChange={(range: DateRange) => handleSetDateRangeOnChange(range)}
         customProps={{
           onSubmit: (range: DateRange) => handleSetDateRangeOnSubmit(range),
@@ -119,15 +119,16 @@ export default function YourComponent() {
 }
 ```
 
-### 2. Date Picker Base (Basic)
+### 2. Picker Base (Basic)
 
 ```jsx
 import { useState } from "react";
-import { DateRange, DateRangePicker } from "mui-daterange-picker-plus";
+import { PickerBase } from "mui-daterange-picker-plus";
+import type { DateRange } from "mui-daterange-picker-plus";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
   };
@@ -135,28 +136,26 @@ export default function YourComponent() {
   console.log("dateRangeOnChange", dateRangeOnChange);
 
   return (
-    <DateRangePicker
+    <PickerBase
       onChange={(range: DateRange) => handleSetDateRangeOnChange(range)}
     />
   );
 }
 ```
 
-### 3. Date Picker Model (Advanced)
+### 3. Picker Model (Advanced)
 
 ```jsx
 import { useState } from "react";
-import { DateRange, DateRangePickerModal } from "mui-daterange-picker-plus";
-import {
-  ArrowCircleRight,
-  ArrowCircleDown,
-} from "@mui/icons-material/ArrowCircleRight";
 import Button from "@mui/material/Button";
+import { PickerModal } from "mui-daterange-picker-plus";
+import type { DateRange } from "mui-daterange-picker-plus";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 export default function YourComponent() {
   // state + handlers for the Modal
-  const [anchorEl, setAnchorEl] =
-    (useState < HTMLButtonElement) | (null > null);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -165,9 +164,9 @@ export default function YourComponent() {
   };
   const open = Boolean(anchorEl);
 
-  // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
-  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState < DateRange > {};
+ // state + handlers for the DateRange Value
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
+  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
     handleSetDateRangeOnSubmit({});
@@ -185,7 +184,7 @@ export default function YourComponent() {
       <Button variant="contained" onClick={handleClick}>
         View Picker Model
       </Button>
-      <DateRangePickerModal
+      <PickerModal
         hideOutsideMonthDays={false}
         initialDateRange={{
           startDate: new Date(),
@@ -225,15 +224,16 @@ export default function YourComponent() {
 }
 ```
 
-### 4. Date Picker Base (Advanced)
+### 4. Picker Base (Advanced)
 
 ```jsx
 import { useState } from "react";
-import { DateRange, DateRangePicker } from "mui-daterange-picker-plus";
+import { PickerBase } from "mui-daterange-picker-plus";
+import type { DateRange } from "mui-daterange-picker-plus";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
   };
@@ -241,7 +241,7 @@ export default function YourComponent() {
   console.log("dateRangeOnChange", dateRangeOnChange);
 
   return (
-    <DateRangePicker
+    <PickerBase
       hideOutsideMonthDays={false}
       initialDateRange={{
         startDate: new Date("2023-09-15"),
@@ -257,7 +257,7 @@ export default function YourComponent() {
 
 ## Customization using Props
 
-### DateRangeProps
+### PickerProps
 
 | Prop                   | Type                             | Default                                 | Description                                       |
 | :--------------------- | :------------------------------- | :-------------------------------------- | :------------------------------------------------ |
@@ -287,19 +287,19 @@ export default function YourComponent() {
 
 ```tsx
 import { PopoverProps } from "@mui/material/Popover";
-import { DateRangeProps, ModalCustomProps } from "./utils";
+import { PickerProps, ModalCustomProps } from "./utils";
 
-type ModalPickerProps = DateRangeProps & {
+type PickerModalProps = PickerProps & {
   modalProps: PopoverProps;
   customProps: ModalCustomProps;
 };
 
-type BasicPickerProps = DateRangeProps;
+type PickerBaseProps = PickerProps;
 ```
 
-> In the above examples, the `DateRangePicker` has included `BasicPickerProps` props. Same as that, `DateRangePickerModal` has included `ModalPickerProps` props.
+> In the above examples, the `PickerBase` has included `PickerBaseProps` props. Same as that, `PickerModal` has included `PickerModalProps` props.
 
-- The `DateRangeProps`, `ModalCustomProps` types are utility types and you can refer them as per your requirement. ( With or Without Modal)
+- The `PickerProps`, `ModalCustomProps` types are utility types and you can refer them as per your requirement. ( With or Without Modal)
 
 - In the below section, you can find the details of the utility types.
 
@@ -328,7 +328,7 @@ type RangeSeparatorIconsProps = {
   md?: ElementType<SvgIconProps>;
 };
 
-type DateRangeProps = {
+type PickerProps = {
   initialDateRange?: DateRange;
   definedRanges?: DefinedRange[];
   minDate?: Date | string;
