@@ -7,12 +7,14 @@ import {
   Select,
   useTheme,
   Typography,
+  Unstable_Grid2 as Grid2,
 } from "@mui/material";
 import type { SelectChangeEvent } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import {
+  KeyboardArrowDown,
+  KeyboardArrowRight,
+  KeyboardArrowLeft,
+} from "@mui/icons-material";
 import { AVAILABLE_MAX_DATE, AVAILABLE_MIN_DATE } from "../Constants";
 
 type MonthHeaderProps = {
@@ -156,7 +158,7 @@ export const MonthHeader = ({
             },
           }}
         >
-          <KeyboardArrowLeftIcon
+          <KeyboardArrowLeft
             fontSize="small"
             sx={{
               fill: prevDisabled ? `${theme.palette.grey[400]}` : "secondary",
@@ -177,7 +179,7 @@ export const MonthHeader = ({
             size="small"
             defaultValue={currentYear}
             IconComponent={(props) => (
-              <KeyboardArrowDownIcon
+              <KeyboardArrowDown
                 fontSize="small"
                 sx={{
                   fill: theme.palette.grey[400],
@@ -241,7 +243,7 @@ export const MonthHeader = ({
               },
             }}
             IconComponent={(props) => (
-              <KeyboardArrowDownIcon
+              <KeyboardArrowDown
                 fontSize="small"
                 sx={{
                   fill: theme.palette.grey[400],
@@ -327,7 +329,7 @@ export const MonthHeader = ({
             },
           }}
         >
-          <KeyboardArrowRightIcon
+          <KeyboardArrowRight
             fontSize="small"
             sx={{
               fill: nextDisabled ? `${theme.palette.grey[400]}` : "secondary",

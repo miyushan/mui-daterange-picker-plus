@@ -147,8 +147,10 @@ export default function YourComponent() {
 ```jsx
 import { useState } from "react";
 import { DateRange, DateRangePickerModal } from "mui-daterange-picker-plus";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
+import {
+  ArrowCircleRight,
+  ArrowCircleDown,
+} from "@mui/icons-material/ArrowCircleRight";
 import Button from "@mui/material/Button";
 
 export default function YourComponent() {

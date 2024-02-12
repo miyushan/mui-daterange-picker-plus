@@ -1,6 +1,4 @@
-import { styled } from "@mui/material";
-import Button from "@mui/material/Button";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import { styled, Button, Unstable_Grid2 as Grid2 } from "@mui/material";
 import type { ModalCustomProps } from "../types/utils";
 
 const CancelButtonStyled = styled(Button)(({ theme }) => ({

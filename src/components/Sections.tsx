@@ -6,18 +6,18 @@ import {
   Typography,
   alpha,
   useTheme,
+  Unstable_Grid2 as Grid2,
 } from "@mui/material";
 import type { SelectChangeEvent, SvgIconProps } from "@mui/material";
 import { differenceInCalendarMonths } from "date-fns";
 import type { Locale } from "date-fns";
 import { DefinedRanges } from "./Sections.DefinedRanges";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 import { DuelCalender } from "./Sections.DuelCalender";
 import { useMemo, useState } from "react";
 import type { ElementType } from "react";
 import { Footer } from "./Sections.Footer";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { KeyboardArrowDown } from "@mui/icons-material";
 import { SingleCalender } from "./Sections.SingleCalender";
 import { NavigationAction } from "../types/utils";
 import type { DateRange, DefinedRange, Setter } from "../types/utils";
@@ -205,7 +205,7 @@ export const Sections = (props: SectionsProps) => {
                 variant="outlined"
                 size="small"
                 IconComponent={(props) => (
-                  <KeyboardArrowDownIcon
+                  <KeyboardArrowDown
                     fontSize="small"
                     sx={{
                       fill: theme.palette.grey[400],

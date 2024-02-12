@@ -1,11 +1,17 @@
 import { format } from "date-fns";
 import type { Locale } from "date-fns";
-import { Divider, styled, useTheme } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import {
+  Divider,
+  styled,
+  useTheme,
+  Typography,
+  Unstable_Grid2 as Grid2,
+} from "@mui/material";
 import { Actions } from "./Actions";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import {
+  KeyboardDoubleArrowDown,
+  KeyboardDoubleArrowRight,
+} from "@mui/icons-material";
 import type { ModalCustomProps } from "../types/utils";
 
 const PreviewDateTypoStyled = styled(Typography)(({ theme }) => ({
@@ -47,8 +53,8 @@ export const Footer = ({
     return format(date, "dd MMMM yyyy", { locale });
   };
 
-  const IconXs = RangeSeparatorIcons?.xs || KeyboardDoubleArrowDownIcon;
-  const IconMd = RangeSeparatorIcons?.md || KeyboardDoubleArrowRightIcon;
+  const IconXs = RangeSeparatorIcons?.xs || KeyboardDoubleArrowDown;
+  const IconMd = RangeSeparatorIcons?.md || KeyboardDoubleArrowRight;
 
   return (
     <>

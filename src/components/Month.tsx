@@ -7,8 +7,12 @@ import {
   isWithinInterval,
 } from "date-fns";
 import type { Locale, Day as DayjsDay } from "date-fns";
-import { Typography, useTheme, alpha } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import {
+  Typography,
+  useTheme,
+  alpha,
+  Unstable_Grid2 as Grid2,
+} from "@mui/material";
 import {
   chunks,
   getDaysInMonth,

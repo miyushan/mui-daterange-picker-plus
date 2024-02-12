@@ -8,8 +8,8 @@ import {
   ListItemText,
   alpha,
   useTheme,
+  Unstable_Grid2 as Grid2,
 } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
 import type { DateRange, DefinedRange } from "../types/utils";
 
 type DefinedRangesProps = {
