@@ -128,7 +128,7 @@ export const MonthHeader = ({
 
   return (
     <>
-      <Grid2 xs="auto" ml="10px">
+      <Grid2 xs="auto" ml="10px" container>
         <IconButton
           disableRipple
           size="small"
@@ -167,7 +167,7 @@ export const MonthHeader = ({
         </IconButton>
       </Grid2>
 
-      <Grid2 xsOffset={"auto"} xs={"auto"}>
+      <Grid2 xsOffset={"auto"} xs={"auto"} container>
         <FormControl>
           <Select
             SelectDisplayProps={{
@@ -231,7 +231,7 @@ export const MonthHeader = ({
         </FormControl>
       </Grid2>
 
-      <Grid2 xsOffset={"auto"} xs="auto">
+      <Grid2 xsOffset={"auto"} xs="auto" container>
         <FormControl>
           <Select
             variant="outlined"
@@ -300,7 +300,7 @@ export const MonthHeader = ({
         </FormControl>
       </Grid2>
 
-      <Grid2 mr="10px" xsOffset={"auto"} xs="auto">
+      <Grid2 mr="10px" xsOffset={"auto"} xs="auto" container>
         <IconButton
           disableRipple
           size="small"
