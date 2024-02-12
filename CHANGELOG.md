@@ -1,5 +1,11 @@
 # mui-daterange-picker-plus
 
+## 1.0.4
+
+### Patch Changes
+
+- 07f1b04: Default imports set to named imports
+
 ## 1.0.3
 
 ### Patch Changes
