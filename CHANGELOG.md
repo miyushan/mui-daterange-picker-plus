@@ -1,4 +1,4 @@
-# mui-date-range-picker-test
+# mui-daterange-picker-plus
 
 ## 1.0.3
 
