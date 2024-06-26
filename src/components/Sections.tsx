@@ -194,7 +194,7 @@ export const Sections = (props: SectionsProps) => {
                 fontSize: "14px",
               }}
             >
-              Quick Select
+              {labels?.predefinedRanges || "Quick Select"}
             </Typography>
 
             <FormControl>
