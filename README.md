@@ -15,20 +15,23 @@ View Demo [here](https://mui-daterange-picker-plus-playground.vercel.app/demo) â
 
 # Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage with Examples](#usage-with-examples)
-  - [Picker Model (Basic)](#1-picker-model-basic)
-  - [Picker Base (Basic)](#2-picker-base-basic)
-  - [Picker Model (Advanced)](#3-picker-model-advanced)
-  - [Picker Base (Advanced)](#4-picker-base-advanced)
-- [Customization using Props](#customization-using-props)
-  - [PickerProps](#pickerprops)
-  - [ModalCustomProps](#modalcustomprops)
-- [Useful Types](#useful-types)
-  - [Main Types](#main-types)
-  - [Utility Types](#utility-types)
-- [License](#license)
+- [Preview](#preview)
+- [MUI Date Range Picker](#mui-date-range-picker)
+- [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage with Examples](#usage-with-examples)
+    - [1. Picker Model (Basic)](#1-picker-model-basic)
+    - [2. Picker Base (Basic)](#2-picker-base-basic)
+    - [3. Picker Model (Advanced)](#3-picker-model-advanced)
+    - [4. Picker Base (Advanced)](#4-picker-base-advanced)
+  - [Customization using Props](#customization-using-props)
+    - [PickerProps](#pickerprops)
+    - [ModalCustomProps](#modalcustomprops)
+  - [Useful Types](#useful-types)
+    - [Main Types](#main-types)
+    - [Utility Types](#utility-types)
+  - [License](#license)
 
 ## Features
 
@@ -259,16 +262,17 @@ export default function YourComponent() {
 
 ### PickerProps
 
-| Prop                   | Type                             | Default                                 | Description                                       |
-| :--------------------- | :------------------------------- | :-------------------------------------- | :------------------------------------------------ |
-| `initialDateRange`     | `DateRange`                      | -                                       | Initial date range for the picker.                |
-| `definedRanges`        | `DefinedRange[]`                 | -                                       | Predefined date ranges for quick selection.       |
-| `minDate`              | `Date \| string`                 | startOfYear(addYears( new Date(), -10)) | Minimum selectable date.                          |
-| `maxDate`              | `Date \| string`                 | endOfYear(addYears( new Date(), 10))    | Maximum selectable date.                          |
-| `onChange`             | `(dateRange: DateRange) => void` | -                                       | Callback function triggered on date range change. |
-| `locale`               | `Locale`                         | -                                       | Locale for date formatting.                       |
-| `hideDefaultRanges`    | `boolean`                        | false                                   | Option to hide default predefined ranges.         |
-| `hideOutsideMonthDays` | `boolean`                        | true                                    | Option to hide days outside the current month.    |
+| Prop                   | Type                             | Default                                 | Description                                                            |
+| :--------------------- | :------------------------------- | :-------------------------------------- | :--------------------------------------------------------------------- |
+| `initialDateRange`     | `DateRange`                      | -                                       | Initial date range for the picker.                                     |
+| `definedRanges`        | `DefinedRange[]`                 | -                                       | Predefined date ranges for quick selection.                            |
+| `minDate`              | `Date \| string`                 | startOfYear(addYears( new Date(), -10)) | Minimum selectable date.                                               |
+| `maxDate`              | `Date \| string`                 | endOfYear(addYears( new Date(), 10))    | Maximum selectable date.                                               |
+| `onChange`             | `(dateRange: DateRange) => void` | -                                       | Callback function triggered on date range change.                      |
+| `locale`               | `Locale`                         | -                                       | Locale for date formatting.                                            |
+| `labels`               | `Labels`                         | -                                       | Customize labels used in UI (Apply, Cancel, Start Date, End Date etc.) |
+| `hideDefaultRanges`    | `boolean`                        | false                                   | Option to hide default predefined ranges.                              |
+| `hideOutsideMonthDays` | `boolean`                        | true                                    | Option to hide days outside the current month.                         |
 
 > Make sure to provide `initialDateRange` within the min and max date.
 

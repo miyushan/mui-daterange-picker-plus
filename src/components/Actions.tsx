@@ -25,10 +25,14 @@ const ApplyButtonStyled = styled(Button)({
 });
 
 type ActionsProps = Omit<ModalCustomProps, "onSubmit"> & {
+  labels?: {
+    apply?: string;
+    cancel?: string;
+  },
   onSubmit: () => void;
 };
 
-export const Actions = ({ onCloseCallback, onSubmit }: ActionsProps) => {
+export const Actions = ({ onCloseCallback, onSubmit, labels }: ActionsProps) => {
   return (
     <>
       <Grid2>
@@ -38,7 +42,7 @@ export const Actions = ({ onCloseCallback, onSubmit }: ActionsProps) => {
           variant="text"
           onClick={onCloseCallback}
         >
-          Cancel
+          {labels.cancel || 'Cancel'}
         </CancelButtonStyled>
       </Grid2>
 
@@ -51,7 +55,7 @@ export const Actions = ({ onCloseCallback, onSubmit }: ActionsProps) => {
           color="primary"
           onClick={onSubmit}
         >
-          Apply Range
+          {labels.apply || 'Apply'}
         </ApplyButtonStyled>
       </Grid2>
     </>
