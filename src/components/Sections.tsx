@@ -21,6 +21,7 @@ import { KeyboardArrowDown } from "@mui/icons-material";
 import { SingleCalender } from "./Sections.SingleCalender";
 import { NavigationAction } from "../types/utils";
 import type { DateRange, DefinedRange, Setter } from "../types/utils";
+import type { Labels } from '../types';
 
 type SectionsProps = {
   dateRange: DateRange;
@@ -43,6 +44,7 @@ type SectionsProps = {
     handleClickNavIcon: (marker: symbol, action: NavigationAction) => void;
   };
   locale?: Locale;
+  labels?: Labels;
 
   hideActionButtons?: boolean;
   hideDefaultRanges?: boolean;
@@ -71,6 +73,7 @@ export const Sections = (props: SectionsProps) => {
     helpers,
     handlers,
     locale,
+    labels,
 
     hideActionButtons = false,
     hideDefaultRanges = false,
@@ -317,6 +320,7 @@ export const Sections = (props: SectionsProps) => {
                 startDate={startDate}
                 endDate={endDate}
                 locale={locale}
+                labels={labels}
                 onCloseCallback={onCloseCallback}
                 onSubmit={handlers.handleClickSubmit}
                 RangeSeparatorIcons={RangeSeparatorIcons}

@@ -1,6 +1,7 @@
 import type { SvgIconProps } from "@mui/material";
 import type { Locale } from "date-fns";
 import type { Dispatch, ElementType, SetStateAction } from "react";
+import type { Labels } from '.';
 
 export type Marker = symbol;
 
@@ -33,6 +34,7 @@ export type PickerProps = {
   minDate?: Date | string;
   maxDate?: Date | string;
   locale?: Locale;
+  labels: Labels;
   onChange?: (dateRange: DateRange) => void;
 
   hideDefaultRanges?: boolean;

@@ -13,6 +13,7 @@ import {
   KeyboardDoubleArrowRight,
 } from "@mui/icons-material";
 import type { ModalCustomProps } from "../types/utils";
+import type { Labels } from '../types';
 
 const PreviewDateTypoStyled = styled(Typography)(({ theme }) => ({
   position: "relative",
@@ -36,6 +37,7 @@ type FooterProps = {
   startDate?: Date;
   endDate?: Date;
   locale?: Locale;
+  labels?: Labels;
 } & Omit<ModalCustomProps, "onSubmit"> & {
     onSubmit: () => void;
   };
@@ -44,6 +46,7 @@ export const Footer = ({
   startDate,
   endDate,
   locale,
+  labels,
   onCloseCallback,
   onSubmit,
   RangeSeparatorIcons,
@@ -85,7 +88,7 @@ export const Footer = ({
               md: "left",
             }}
           >
-            Start Date
+            {labels?.footer?.startDate || 'Start Date'}
           </PreviewDateMessageTypoStyled>
         )}
 
@@ -127,7 +130,7 @@ export const Footer = ({
               md: "left",
             }}
           >
-            End Date
+            {labels?.footer?.endDate || 'End Date'}
           </PreviewDateMessageTypoStyled>
         )}
       </Grid2>
@@ -142,7 +145,7 @@ export const Footer = ({
       </Grid2>
 
       <Grid2 xs="auto" container justifyContent={"flex-end"}>
-        <Actions onCloseCallback={onCloseCallback} onSubmit={onSubmit} />
+        <Actions onCloseCallback={onCloseCallback} onSubmit={onSubmit} labels={labels?.actions} />
       </Grid2>
     </>
   );

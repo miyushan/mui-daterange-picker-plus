@@ -12,3 +12,14 @@ export type PickerModalProps = PickerProps & {
 };
 
 export type PickerBaseProps = PickerProps;
+
+export type Labels = {
+  actions?: {
+    apply?: string;
+    cancel?: string;
+  },
+  footer?: {
+    startDate?: string;
+    endDate?: string;
+  }
+}
