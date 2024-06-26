@@ -267,6 +267,7 @@ export const Sections = (props: SectionsProps) => {
             canNavigateCloser={canNavigateCloser}
             commonProps={commonProps}
             hideOutsideMonthDays={hideOutsideMonthDays}
+            locale={locale}
           />
         </Grid2>
 
@@ -280,6 +281,7 @@ export const Sections = (props: SectionsProps) => {
             canNavigateCloser={canNavigateCloser}
             commonProps={commonProps}
             hideOutsideMonthDays={hideOutsideMonthDays}
+            locale={locale}
           />
         </Grid2>
 
