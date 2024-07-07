@@ -1,7 +1,2 @@
 node_modules
 dist
-.vscode
-index.d.mts
-index.d.ts
-index.js
-index.mjs

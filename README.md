@@ -56,8 +56,8 @@ npm install mui-daterange-picker-plus
 ```jsx
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import { PickerModal } from "mui-daterange-picker-plus";
-import type { DateRange } from "mui-daterange-picker-plus";
+import { PickerModal } from "mui-daterange-picker-plus/dist";
+import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
    // state + handlers for the Modal
@@ -123,8 +123,8 @@ export default function YourComponent() {
 
 ```jsx
 import { useState } from "react";
-import { PickerBase } from "mui-daterange-picker-plus";
-import type { DateRange } from "mui-daterange-picker-plus";
+import { PickerBase } from "mui-daterange-picker-plus/dist";
+import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value
@@ -148,8 +148,8 @@ export default function YourComponent() {
 ```jsx
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import { PickerModal } from "mui-daterange-picker-plus";
-import type { DateRange } from "mui-daterange-picker-plus";
+import { PickerModal } from "mui-daterange-picker-plus/dist";
+import type { DateRange } from "mui-daterange-picker-plus/dist";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
@@ -228,8 +228,8 @@ export default function YourComponent() {
 
 ```jsx
 import { useState } from "react";
-import { PickerBase } from "mui-daterange-picker-plus";
-import type { DateRange } from "mui-daterange-picker-plus";
+import { PickerBase } from "mui-daterange-picker-plus/dist";
+import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value

@@ -11,11 +11,11 @@
     "node_modules"
   ],
   "description": "A modern Typescript/JavaScript library for simplifying date-range related operations and enhancing date-picker components in web applications. It provides a range of utilities, including date formatting, parsing, and a fully customizable date range picker with support for various locales.",
-  "main": "./index.js",
-  "module": "./index.mjs",
-  "types": "./index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --out-dir ./",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "ci": "pnpm run lint && pnpm run build",
     "release": "pnpm run lint && pnpm run build && changeset publish"
@@ -41,12 +41,6 @@
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
-  "files": [
-    "./index.d.mts",
-    "./index.d.ts",
-    "./index.js",
-    "./index.mjs"
-  ],
   "keywords": [
     "mui-date-range-picker",
     "date-range-picker",
