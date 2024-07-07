@@ -1,5 +1,11 @@
 # mui-daterange-picker-plus
 
+## 1.0.7
+
+### Patch Changes
+
+- dbb6ae8: provide option to update placeholders
+
 ## 1.0.6
 
 ### Patch Changes
