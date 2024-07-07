@@ -1,5 +1,11 @@
 # mui-daterange-picker-plus
 
+## 1.0.6
+
+### Patch Changes
+
+- 64aa184: resolve build issue
+
 ## 1.0.5
 
 ### Patch Changes
