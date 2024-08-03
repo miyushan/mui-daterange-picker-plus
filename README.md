@@ -63,9 +63,8 @@ import { PickerModal } from "mui-daterange-picker-plus/dist";
 import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
-  // state + handlers for the Modal
-  const [anchorEl, setAnchorEl] =
-    (useState < HTMLButtonElement) | (null > null);
+   // state + handlers for the Modal
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -74,9 +73,9 @@ export default function YourComponent() {
   };
   const open = Boolean(anchorEl);
 
-  // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
-  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState < DateRange > {};
+ // state + handlers for the DateRange Value
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
+  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
     handleSetDateRangeOnSubmit({});
@@ -132,7 +131,7 @@ import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
   };
@@ -159,8 +158,7 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 export default function YourComponent() {
   // state + handlers for the Modal
-  const [anchorEl, setAnchorEl] =
-    (useState < HTMLButtonElement) | (null > null);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -169,9 +167,9 @@ export default function YourComponent() {
   };
   const open = Boolean(anchorEl);
 
-  // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
-  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState < DateRange > {};
+ // state + handlers for the DateRange Value
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
+  const [dateRangeOnSubmit, setDateRangeOnSubmit] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
     handleSetDateRangeOnSubmit({});
@@ -238,7 +236,7 @@ import type { DateRange } from "mui-daterange-picker-plus/dist";
 
 export default function YourComponent() {
   // state + handlers for the DateRange Value
-  const [dateRangeOnChange, setDateRangeOnChange] = useState < DateRange > {};
+  const [dateRangeOnChange, setDateRangeOnChange] = useState<DateRange>({});
   const handleSetDateRangeOnChange = (dateRange: DateRange) => {
     setDateRangeOnChange(dateRange);
   };
