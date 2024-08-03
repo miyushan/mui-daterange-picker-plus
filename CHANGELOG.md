@@ -1,5 +1,11 @@
 # mui-daterange-picker-plus
 
+## 1.0.8
+
+### Patch Changes
+
+- b10a1fb: fix: fix readme formatting issue
+
 ## 1.0.7
 
 ### Patch Changes
