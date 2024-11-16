@@ -21,9 +21,9 @@ View Demo [here](https://mui-daterange-picker-plus-playground.vercel.app/demo) â
   - [Features](#features)
   - [Installation](#installation)
   - [Usage with Examples](#usage-with-examples)
-    - [1. Picker Model (Basic)](#1-picker-model-basic)
+    - [1. Picker Modal (Basic)](#1-picker-modal-basic)
     - [2. Picker Base (Basic)](#2-picker-base-basic)
-    - [3. Picker Model (Advanced)](#3-picker-model-advanced)
+    - [3. Picker Modal (Advanced)](#3-picker-modal-advanced)
     - [4. Picker Base (Advanced)](#4-picker-base-advanced)
   - [Customization using Props](#customization-using-props)
     - [PickerProps](#pickerprops)
@@ -54,7 +54,7 @@ npm install mui-daterange-picker-plus
 
 ## Usage with Examples
 
-### 1. Picker Model (Basic)
+### 1. Picker Modal (Basic)
 
 ```jsx
 import { useState } from "react";
@@ -91,7 +91,7 @@ export default function YourComponent() {
   return (
     <>
       <Button variant="contained" onClick={handleClick}>
-        View Picker Model
+        View Picker Modal
       </Button>
       <PickerModal
         onChange={(range: DateRange) => handleSetDateRangeOnChange(range)}
@@ -146,7 +146,7 @@ export default function YourComponent() {
 }
 ```
 
-### 3. Picker Model (Advanced)
+### 3. Picker Modal (Advanced)
 
 ```jsx
 import { useState } from "react";
@@ -185,7 +185,7 @@ export default function YourComponent() {
   return (
     <>
       <Button variant="contained" onClick={handleClick}>
-        View Picker Model
+        View Picker Modal
       </Button>
       <PickerModal
         hideOutsideMonthDays={false}
