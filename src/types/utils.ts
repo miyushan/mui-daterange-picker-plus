@@ -33,10 +33,12 @@ export type PickerProps = {
   definedRanges?: DefinedRange[];
   minDate?: Date | string;
   maxDate?: Date | string;
+  minDays?: number;
+  maxDays?: number;
   locale?: Locale;
   labels?: Labels;
   onChange?: (dateRange: DateRange) => void;
-
+  dateRange?: DateRange;
   hideDefaultRanges?: boolean;
   hideOutsideMonthDays?: boolean;
 };

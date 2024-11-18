@@ -267,7 +267,10 @@ export default function YourComponent() {
 | `initialDateRange`     | `DateRange`                      | -                                       | Initial date range for the picker.                                     |
 | `definedRanges`        | `DefinedRange[]`                 | -                                       | Predefined date ranges for quick selection.                            |
 | `minDate`              | `Date \| string`                 | startOfYear(addYears( new Date(), -10)) | Minimum selectable date.                                               |
-| `maxDate`              | `Date \| string`                 | endOfYear(addYears( new Date(), 10))    | Maximum selectable date.                                               |
+| `maxDate`              | `Date \| string`                 | endOfYear(addYears( new Date(), 10))    | Maximum selectable date.
+| `minDays?`             | `number`                 | - | Minimum selectable days.                                               |
+| `maxDays?`             |  `number`                 | - | Maximum selectable days.
+| `dateRange?`             |  `DateRange`                 | - | Controlled date range for the picker.                        |
 | `onChange`             | `(dateRange: DateRange) => void` | -                                       | Callback function triggered on date range change.                      |
 | `locale`               | `Locale`                         | -                                       | Locale for date formatting.                                            |
 | `labels`               | `Labels`                         | -                                       | Customize labels used in UI (Apply, Cancel, Start Date, End Date etc.) |
@@ -337,6 +340,9 @@ type PickerProps = {
   definedRanges?: DefinedRange[];
   minDate?: Date | string;
   maxDate?: Date | string;
+  minDays?: number;
+  maxDays?: number;
+  dateRange?: DateRange;
   locale?: Locale;
   onChange?: (dateRange: DateRange) => void;
 

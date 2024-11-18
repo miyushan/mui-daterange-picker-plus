@@ -1,5 +1,7 @@
 import {
+  addDays,
   addMonths,
+  differenceInDays,
   isAfter,
   isBefore,
   isSameDay,
@@ -32,6 +34,9 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
     initialDateRange,
     minDate,
     maxDate,
+    minDays,
+    maxDays,
+    dateRange,
     definedRanges = getDefaultRanges(new Date(), props.locale),
     locale,
   } = props;
@@ -45,7 +50,7 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
     minValidDate,
     maxValidDate
   );
-  const [dateRange, setDateRange] = useState<DateRange>({
+  const [internalDateRange, setInternalDateRange] = useState<DateRange>({
     ...initialDateRange,
   });
   const [hoverDay, setHoverDay] = useState<Date>();
@@ -56,7 +61,7 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
     initialSecondMonth || addMonths(firstMonth, 1)
   );
 
-  const { startDate, endDate } = dateRange;
+  const { startDate, endDate } = dateRange || internalDateRange;
 
   // handlers
   const handleSetFirstMonth = (date: Date) => {
@@ -116,12 +121,18 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
 
   const handleClickDefinedRange = (range: DateRange) => {
     let { startDate: newStart, endDate: newEnd } = range;
-
     if (newStart && newEnd) {
+      const diff = differenceInDays(newEnd, newStart);
       range.startDate = newStart = max([newStart, minValidDate]);
-      range.endDate = newEnd = min([newEnd, maxValidDate]);
+      if (minDays && diff < minDays) {
+        range.endDate = newEnd = min([addDays(newStart, minDays), maxValidDate]);
+      } else  if (maxDays && diff > maxDays) {
+        range.endDate = newEnd = min([addDays(newStart, maxDays), maxValidDate]);
+      } else {
+        range.endDate = newEnd = min([newEnd, maxValidDate]);
+      }
 
-      setDateRange(range);
+      if (!dateRange) setInternalDateRange(range);
       onChangeCallback && onChangeCallback(range); //OUTPUT to the user (SUCCESSFUL SELECTION)
 
       setFirstMonth(newStart);
@@ -129,7 +140,7 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
         isSameMonth(newStart, newEnd) ? addMonths(newStart, 1) : newEnd
       );
     } else {
-      setDateRange({});
+      if (!dateRange) setInternalDateRange({});
       onChangeCallback && onChangeCallback({}); //OUTPUT to the user (UNSUCCESSFUL SELECTION)
 
       setFirstMonth(today);
@@ -139,21 +150,30 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
 
   const handleClickDateNumber = (day: Date) => {
     if (startDate && !endDate && !isBefore(day, startDate)) {
+      const diff = differenceInDays(day, startDate);
+      let newDay;
+      if (minDays && diff < minDays) {
+        newDay = min([addDays(startDate, minDays), maxValidDate]);
+      } else  if (maxDays && diff > maxDays) {
+        newDay = min([addDays(startDate, maxDays), maxValidDate]);
+      } else {
+        newDay = day;
+      }
       // * check for a valid End Date
-      const newRange = { startDate, endDate: day };
+      const newRange = { startDate, endDate: newDay };
       onChangeCallback && onChangeCallback(newRange);
-      setDateRange(newRange);
+      if (!dateRange) setInternalDateRange(newRange);
     } else {
       // * check for a valid Start Date
-      setDateRange({ startDate: day, endDate: undefined });
+      if (!dateRange) setInternalDateRange({ startDate: day, endDate: undefined });
     }
     setHoverDay(day);
   };
 
   const handleClickSubmit = () => {
-    const { startDate, endDate } = dateRange;
+    const { startDate, endDate } = dateRange || internalDateRange;
     if (onSubmitCallback && startDate && endDate) {
-      onSubmitCallback(dateRange);
+      onSubmitCallback(dateRange||internalDateRange);
     }
     // handleSetCalenderNum(0);
   };
@@ -201,7 +221,7 @@ export const useDateRangePicker = (props: useDateRangePickerProps) => {
   };
 
   return {
-    dateRange,
+    dateRange: dateRange || internalDateRange,
     ranges: definedRanges,
     minDate: minValidDate,
     maxDate: maxValidDate,
